@@ -7,8 +7,9 @@ public class Soru1 : MonoBehaviour
 {
     public GameObject cube;
     public GameObject cube2;
-    private float gametime;
-    [SerializeField] public float repeattime;
+    //private float gametime;
+    //[SerializeField] public float repeattime;
+    public float speed;
 
     private void Start()
     {
@@ -16,15 +17,8 @@ public class Soru1 : MonoBehaviour
     }
     private void Update()
     {
-        gametime += Time.deltaTime;
 
-        if (gametime > repeattime)
-        {
-            RotationMethod();
-
-            gametime = 0;
-        }
-
+        RotationMethod();
     }
 
     private void InstantiateMethod()
@@ -37,6 +31,8 @@ public class Soru1 : MonoBehaviour
 
     private void RotationMethod()
     {
-        cube2.GetComponent<Transform>().eulerAngles += new Vector3(10, 0, 0);
+        //cube2.GetComponent<Transform>().eulerAngles += new Vector3(10, 0, 0);
+
+        cube2.transform.Rotate(Vector3.right * speed * Time.deltaTime);
     }
 }
