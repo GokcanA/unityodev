@@ -31,8 +31,7 @@ public class Soru1 : MonoBehaviour
 
     private void RotationMethod()
     {
-        //cube2.GetComponent<Transform>().eulerAngles += new Vector3(10, 0, 0);
-
+        //cube2.GetComponent<Transform>().localEulerAngles += transform.right * speed * Time.deltaTime;
         cube2.transform.Rotate(Vector3.right * speed * Time.deltaTime);
     }
 }

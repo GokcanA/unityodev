@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 6931237492369023917, guid: 2a69c8195c30ce0469fe412fafc912c8, type: 3}
   cube2: {fileID: 0}
-  repeattime: 0.5
+  speed: 10
 --- !u!4 &1780900963
 Transform:
   m_ObjectHideFlags: 0
